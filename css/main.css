@@ -1,0 +1,45 @@
+body {
+  background-image: url("http://static01.nyt.com/images/2012/09/09/magazine/09weather/mag-09weather-t_CA0-superJumbo.jpg");
+  background-size: cover;
+  background-position: 0px -200px; }
+
+.top h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
+
+form input {
+  padding: 10px 15px; }
+
+form button {
+  padding: 10px 40px;
+  background-color: lightBlue;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 10px;
+  font-size: 22px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+
+.row {
+  margin-top: 30px; }
+
+.day {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  height: 280px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4); }
+  .day img {
+    filter: blur(0px) grayscale(1);
+    width: 100px;
+    height: 100px; }
+  .day:hover img {
+    filter: blur(0px) sepia(0); }
+
+@media only screen and (max-width: 990px) {
+  .day {
+    height: 100%; } }
