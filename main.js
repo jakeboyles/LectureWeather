@@ -4,23 +4,26 @@
     // On Load Get Cincinnati
     getData();
 
+    // On form submit
+    $('form').on("submit",handleSubmit)
+
     // Function that gets our citys data
     function getData(city = "cincinnati")
     {
     	$.ajax({
-    		url: `http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=8&units=imperial&APPID=d0458c4189cf033bf80c84d7a0d38ab0`, 
+    		url: `//api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=8&units=imperial&APPID=d0458c4189cf033bf80c84d7a0d38ab0`, 
     		success:(result)=>{
         	writeToHTML(result.list);
     	}});
     }
 
-    // On form submit
-    $('form').on("submit",(e)=>{
-    	e.preventDefault();
-    	let input = $('input').val();
-    	getData(input);
-    	$('input').val("");
-    })
+    // Handle the submit
+    function handleSubmit(e){
+        e.preventDefault();
+        let input = $('input').val();
+        getData(input);
+        $('input').val("");
+    }
 
     // One function that handles writing
     function writeToHTML(weatherData){
